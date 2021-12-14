@@ -23,6 +23,7 @@ $style: "inputs";
   &__input {
     position: absolute;
     appearance: none;
+    visibility: hidden;
     background: $white;
     color: $white;
     &:checked + .inputs__box {
