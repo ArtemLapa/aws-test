@@ -8,6 +8,12 @@ $style: "buttons";
     display: flex;
     flex-wrap: wrap;
     justify-content: stretch;
+    @include media-b($b-lg) {
+      justify-content: start;
+    }
+    @include media-b($b-xl) {
+      justify-content: center;
+    }
   }
   &__custom-btn {
     text-transform: uppercase;

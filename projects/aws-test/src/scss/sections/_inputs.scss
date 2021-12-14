@@ -4,6 +4,14 @@ $style: "inputs";
   color: $common-text;
   font-size: 15px;
   margin-bottom: 52px;
+  &__wrapper {
+    @include media-b($b-sm) {
+      justify-content: space-between;
+    }
+    @include media-b($b-lg) {
+      justify-content: center;
+    }
+  }
   &__checkbox-wrap {
     margin-bottom: 40px;
   }

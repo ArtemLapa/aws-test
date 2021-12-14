@@ -16,6 +16,9 @@ $style: "header";
     justify-content: space-between;
     align-items: center;
     padding: 14px 18px 9px;
+    @include media-b($b-lg) {
+      padding: 14px 0 9px;
+    }
   }
   &__logo-wrap {
   }
