@@ -1,0 +1,60 @@
+$style: "footer";
+.#{$style} {
+  background: $athens-gray;
+  &__accordion-item {
+    background-color: $athens-gray;
+    border-color: $white;
+  }
+  // &__accordion-button {
+  //   background-color: $athens-gray;
+  // }
+  .accordion-button {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    color: $common-black;
+    font-weight: bold;
+    background-color: $athens-gray;
+    padding: 17px 34px 16px 28px;
+    &:after {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='15px' height='8px'%3E%3Cpath fill-rule='evenodd' fill='rgb(0, 0, 0)' d='M15.0,1.524 L7.919,7.999 L7.500,7.616 L7.81,7.999 L0.0,1.524 L1.669,0.1 L7.500,5.330 L13.331,0.1 L15.0,1.524 Z'/%3E%3C/svg%3E");
+      background-size: 15px;
+      background-position: center;
+    }
+    &:not(.collapsed) {
+      box-shadow: none;
+      border-bottom: 1px solid $white;
+      color: $primary-blue;
+    }
+    &:not(.collapsed):after {
+      fill: rgb(0, 73, 176);
+    }
+    &:focus {
+      box-shadow: none;
+    }
+    &:focus-visible {
+      border: none;
+    }
+  }
+  &__accordion-body {
+    padding: 0;
+  }
+  &__nav-item {
+    padding: 18px 0 17px 47px;
+    border-bottom: 1px solid $white;
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+  &__nav-link {
+    text-decoration: none;
+    font-size: 16px;
+    color: $common-black;
+    transition: color 0.2s ease-in;
+    &:hover {
+      color: $primary-blue;
+    }
+  }
+  // .accordion-button:not(.collapsed) {
+  //   background-color: $athens-gray;
+  // }
+}

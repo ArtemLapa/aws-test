@@ -1,0 +1,87 @@
+$style: "inputs";
+.#{$style} {
+  font-family: "Open Sans", sans-serif;
+  color: $common-text;
+  font-size: 15px;
+  margin-bottom: 52px;
+  &__checkbox-wrap {
+    margin-bottom: 40px;
+  }
+  &__section-title {
+    margin-bottom: 32px;
+  }
+  &__check-option {
+    display: block;
+    margin-bottom: 16px;
+    width: fit-content;
+    position: relative;
+    padding-left: 36px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__input {
+    position: absolute;
+    appearance: none;
+    background: $white;
+    color: $white;
+    &:checked + .inputs__box {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='8px' height='6px'%3E%3Cpath fill-rule='evenodd' fill='rgb(49, 165, 231)' d='M7.999,1.321 L3.322,5.998 L3.20,5.696 L2.718,5.998 L0.0,3.280 L1.281,1.998 L2.979,3.696 L6.676,0.0 L7.999,1.321 Z'/%3E%3C/svg%3E");
+      border-color: $chekbox-checked;
+    }
+    &:focus + .inputs__box {
+      box-shadow: 0 0 0 1px #4a90e2;
+    }
+    &--radio {
+      &:checked + .inputs__box--radio {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='6px' height='6px'%3E%3Cpath fill-rule='evenodd' fill='rgb(49, 165, 231)' d='M2.999,0.0 C4.656,0.0 5.999,1.343 5.999,2.999 C5.999,4.656 4.656,5.999 2.999,5.999 C1.342,5.999 0.0,4.656 0.0,2.999 C0.0,1.343 1.342,0.0 2.999,0.0 Z'/%3E%3C/svg%3E");
+      }
+    }
+  }
+  &__box {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 0;
+    overflow: hidden;
+    background-color: $white;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    border: 1px solid $chekbox;
+    &--radio {
+      border-radius: 50%;
+    }
+  }
+  &__radio-wrap {
+    margin-bottom: 40px;
+  }
+
+  // switchers
+  &__switch-check-input.form-check-input {
+    background-color: $warning;
+    border-color: transparent;
+    fill: rgb(255, 255, 255);
+    color: $white;
+    height: 20px;
+    width: 48px;
+    margin-top: 0;
+    margin-right: 20px;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+    &:focus {
+      box-shadow: 0 0 0 1px rgba(244, 154, 158, 0.5);
+      border-color: transparent;
+      fill: rgb(255, 255, 255);
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+    }
+    &:focus-visible {
+      border-color: $warning-hover;
+    }
+    &:checked {
+      background-color: $succes;
+      border: none;
+    }
+  }
+  &__switch-check-label {
+    margin-top: 4px;
+  }
+}

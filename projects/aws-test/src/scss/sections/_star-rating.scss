@@ -1,0 +1,14 @@
+$style: "star-rating";
+.#{$style} {
+  margin-bottom: 50px;
+  &__section-title {
+    margin-bottom: 30px;
+  }
+  &__rating-percent {
+    width: fit-content;
+  }
+  &__star {
+    cursor: pointer;
+    color: $star-color;
+  }
+}

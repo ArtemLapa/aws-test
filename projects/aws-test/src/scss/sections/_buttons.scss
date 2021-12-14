@@ -1,0 +1,94 @@
+$style: "buttons";
+.#{$style} {
+  margin-bottom: 30px;
+  &__section-title {
+    margin-bottom: 30px;
+  }
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: stretch;
+  }
+  &__custom-btn {
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    color: $white;
+    border-radius: 3px;
+    border: 1px solid;
+    letter-spacing: 0.7px;
+    font-weight: normal;
+    font-style: normal;
+    padding: 18px 19px 16px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    line-height: unset;
+    &:focus {
+      color: $white;
+    }
+    &.btn-primary {
+      background-color: $primary-blue;
+      border-color: $primary-blue;
+      &:hover {
+        background-color: $primary-blue-hover;
+      }
+      &:focus {
+        box-shadow: 0 0 0 0.25rem rgba(0, 73, 176, 0.5);
+      }
+    }
+    &.btn-outline-primary {
+      background-color: $white;
+      border-color: $primary-blue;
+      color: $primary-blue;
+      &:hover {
+        background-color: $primary-blue;
+        color: $white;
+      }
+      &:focus {
+        box-shadow: 0 0 0 0.25rem rgba(0, 73, 176, 0.5);
+      }
+    }
+    &.btn-success {
+      background-color: $succes;
+      border-color: $succes;
+      &:hover {
+        background-color: $succes-hover;
+      }
+      &:focus {
+        box-shadow: 0 0 0 0.25rem rgba(52, 191, 73, 0.5);
+      }
+    }
+    &.btn-info {
+      background-color: $info;
+      border-color: $info;
+      &:hover {
+        background-color: $info-hover;
+        color: $white;
+      }
+      &:focus {
+        box-shadow: 0 0 0 0.25rem rgba(109, 207, 246, 0.5);
+      }
+    }
+    &.btn-warning {
+      background-color: $warning;
+      border-color: $warning;
+      &:hover {
+        background-color: $warning-hover;
+        color: $white;
+      }
+      &:focus {
+        box-shadow: 0 0 0 0.25rem rgba(244, 154, 158, 0.5);
+      }
+    }
+    &.btn-danger {
+      background-color: $danger;
+      border-color: $danger;
+      &:hover {
+        background-color: $danger-hover;
+      }
+      &:focus {
+        box-shadow: 0 0 0 0.25rem rgba(237, 28, 36, 0.5);
+      }
+    }
+  }
+}
