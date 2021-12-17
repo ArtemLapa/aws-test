@@ -1,0 +1,101 @@
+$carousel: "carousel";
+$thumbs: "thumbs";
+.#{$carousel} {
+  &__wrapper {
+    position: relative;
+  }
+  margin-bottom: 50px;
+  &__main-carousel {
+    margin-bottom: 20px;
+  }
+  &__section-title {
+    margin-bottom: 20px;
+  }
+  &__slide-card {
+    min-height: 419px;
+    // max-height: 419px;
+    border: 1px solid $border-card;
+    padding: 30px 16px 24px;
+  }
+  &__card-img-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  &__card-img {
+    height: 188px;
+    width: 188px;
+    object-fit: cover;
+  }
+  &__card-description {
+    color: $color-card;
+    font-size: 16px;
+    font-weight: normal;
+    text-align: left;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  &__card-name {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.5;
+    text-transform: uppercase;
+    color: $title-color;
+    margin-bottom: 20px;
+  }
+  &__card-date {
+    color: $title-color;
+    font-size: 16px;
+    font-weight: normal;
+  }
+  &__btn-prev,
+  &__btn-next {
+    border: 1px solid #dadada;
+    width: 42px;
+    height: 42px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__btn-prev {
+    position: absolute;
+    top: 50%;
+    left: -56px;
+    transform: translateY(-50%);
+  }
+}
+
+.#{$thumbs} {
+  &__thumbs-nav-item {
+    width: fit-content !important;
+    margin-right: 15px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__thumbs-nav-img {
+    width: 62px;
+    height: 62px;
+  }
+}
+
+.thumbs__carousel-thumbs .slick-list {
+  padding: 0 !important;
+}
+
+.thumbs__carousel-thumbs .slick-track {
+  width: 100% !important;
+  min-width: 298px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel .slick-prev:before,
+.slick-next:before {
+  opacity: 1;
+  color: $common-text;
+}
+
+.carousel .slick-next:before {
+}

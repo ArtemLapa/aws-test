@@ -49,3 +49,8 @@ function executeRating(stars) {
   });
 }
 executeRating(ratingStars);
+
+/**
+ * Slick Slider Config
+ */
+import "./carousel.js";
