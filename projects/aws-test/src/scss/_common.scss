@@ -46,6 +46,13 @@ $search: "search";
     position: relative;
     display: flex;
     align-items: center;
+    &--desktop {
+      display: none;
+
+      @include media-b($b-lg) {
+        display: block;
+      }
+    }
   }
   &__input {
     width: 100%;
