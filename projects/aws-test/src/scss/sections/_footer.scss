@@ -1,13 +1,25 @@
 $style: "footer";
 .#{$style} {
   background: $athens-gray;
+  @include media-b($b-xl) {
+    padding: 54px 0 72px;
+  }
+  &__desktop {
+    display: none;
+
+    @include media-b($b-xl) {
+      display: block;
+    }
+  }
+  &__mobile {
+    @include media-b($b-xl) {
+      display: none;
+    }
+  }
   &__accordion-item {
     background-color: $athens-gray;
     border-color: $white;
   }
-  // &__accordion-button {
-  //   background-color: $athens-gray;
-  // }
   .accordion-button {
     font-family: "Roboto", sans-serif;
     font-size: 16px;
@@ -38,11 +50,29 @@ $style: "footer";
   &__accordion-body {
     padding: 0;
   }
+  &__nav-title {
+    font-size: 16px;
+    color: $primary-blue;
+    line-height: 2.5;
+    letter-spacing: 0.8px;
+    font-weight: bold;
+    margin-bottom: 24px;
+    font-family: "Roboto", sans-serif;
+  }
   &__nav-item {
     padding: 18px 0 17px 47px;
     border-bottom: 1px solid $white;
+    font-family: "Roboto", sans-serif;
     &:last-child {
       border-bottom: none;
+    }
+    &--desktop {
+      padding: 0;
+      border-bottom: none;
+      margin-bottom: 22px;
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
   &__nav-link {
@@ -54,7 +84,4 @@ $style: "footer";
       color: $primary-blue;
     }
   }
-  // .accordion-button:not(.collapsed) {
-  //   background-color: $athens-gray;
-  // }
 }
