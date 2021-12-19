@@ -53,6 +53,10 @@ $search: "search";
     border: 1px solid #a1a1a1;
     border-radius: 2px;
     font-family: "Open Sans", sans-serif;
+
+    @include media-b($b-lg) {
+      padding: 6px 80px 5px 15px;
+    }
   }
   &__btn {
     height: 100%;
