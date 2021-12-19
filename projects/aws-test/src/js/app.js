@@ -7,7 +7,14 @@ const searchWrapper = document.querySelector(".search__wrapper");
 const searchBtnMob = document.querySelector(".header__search-btn--mobile");
 const searchIconMob = document.querySelector(".header__search-icon");
 const searchIconCloseMob = document.querySelector(".header__search-icon-close");
+const main = document.querySelector("main");
+const footer = document.querySelector("footer");
 
+console.log(main, main.hasChildNodes());
+
+/**
+ * Header & navigation
+ */
 searchBtn.addEventListener("click", (e) => {
   e.preventDefault();
 });
@@ -23,6 +30,17 @@ searchBtnMob.addEventListener("click", () => {
   searchIconCloseMob.classList.toggle("d-none");
   searchIconMob.classList.toggle("d-none");
 });
+
+/**
+ * Footer sticky
+ */
+function isMainHasChild(elem) {
+  if (elem.hasChildNodes()) {
+    footer.classList.add("footer--sticky");
+  }
+}
+
+isMainHasChild(main);
 
 /**
  * Star rating
