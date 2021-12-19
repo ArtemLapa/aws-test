@@ -24,8 +24,6 @@ searchBtnMob.addEventListener("click", () => {
   searchIconMob.classList.toggle("d-none");
 });
 
-// найти инпуты с атрибутом и проверять атрибут чек, если есть, добавить класс эктив
-
 /**
  * Star rating
  */
@@ -51,6 +49,36 @@ function executeRating(stars) {
 executeRating(ratingStars);
 
 /**
- * Slick Slider Config
+ * Tiny Slider Config
  */
-import "./carousel.js";
+let slider = tns({
+  container: ".carousel__main-carousel",
+  items: 1,
+  controlsContainer: ".custom-controls",
+  mouseDrag: true,
+  navContainer: ".thumbs__carousel-thumbs",
+  navAsThumbnails: true,
+  autoplay: false,
+  autoplayButton: false,
+  // autoplayTimeout: 1000,
+  // autoplayButton: "#customize-toggle",
+  swipeAngle: false,
+  // speed: 400,
+  controls: false,
+  autoWidth: true,
+  center: true,
+  swipeAngle: false,
+  fixedWidth: 300,
+  gutter: 300,
+  responsive: {
+    992: {
+      gutter: 510,
+      controls: true,
+      fixedWidth: 620,
+      center: true,
+    },
+    1200: {
+      fixedWidth: 760,
+    },
+  },
+});
