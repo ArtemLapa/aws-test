@@ -1,14 +1,30 @@
 $style: "star-rating";
 .#{$style} {
   margin-bottom: 50px;
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    @include media-b($b-md) {
+      justify-content: center;
+    }
+  }
   &__section-title {
     margin-bottom: 30px;
   }
   &__rating-percent {
     width: fit-content;
+    margin-right: 20px;
   }
   &__star {
     cursor: pointer;
     color: $star-color;
+  }
+  &__rating-title {
+    font-size: 15px;
+    font-family: "Open Sans", sans-serif;
+    color: $common-text;
+    line-height: normal;
   }
 }
