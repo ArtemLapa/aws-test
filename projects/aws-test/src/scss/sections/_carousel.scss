@@ -7,9 +7,17 @@ $thumbs: "thumbs";
   margin-bottom: 50px;
   &__main-carousel {
     margin-bottom: 20px;
+
+    @include media-b($b-xl) {
+      margin-bottom: 50px;
+    }
   }
   &__section-title {
     margin-bottom: 20px;
+
+    @include media-b($b-lg) {
+      margin-bottom: 52px;
+    }
   }
   &__slide-card {
     // height: 420px;
@@ -17,6 +25,7 @@ $thumbs: "thumbs";
     border: 1px solid $border-card;
     padding: 30px 16px 24px;
     max-width: 290px;
+
     @include media-b($b-lg) {
       max-width: 620px;
       width: 100%;
@@ -26,26 +35,42 @@ $thumbs: "thumbs";
     }
     @include media-b($b-xl) {
       max-width: 760px;
+      justify-content: flex-end;
+      align-items: center;
     }
   }
   &__card-img-wrapper {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
+
     @include media-b($b-lg) {
       margin-bottom: 0;
       margin-right: 42px;
+    }
+    @include media-b($b-xl) {
+      margin-right: 64px;
     }
   }
   &__card-img {
     height: 188px;
     width: 188px;
     object-fit: cover;
+
+    @include media-b($b-xl) {
+      width: 270px;
+      height: 270px;
+    }
   }
   &__text-content {
     font-family: "PT Sans", sans-serif;
+
     @include media-b($b-lg) {
       padding-top: 16px;
+      max-width: 325px;
+    }
+    @include media-b($b-xl) {
+      padding-top: 0;
     }
   }
   &__card-description {
@@ -77,6 +102,11 @@ $thumbs: "thumbs";
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    &:hover {
+      border: 1px solid $primary-blue;
+      color: $primary-blue;
+      transition: border 0.2s ease-in;
+    }
   }
   &__btn-prev {
     position: absolute;
@@ -117,39 +147,4 @@ $thumbs: "thumbs";
 }
 .tns-nav-active {
   border: solid 2px $primary-blue;
-  // transition: border-color 0.2s ease;
 }
-// .thumbs__carousel-thumbs .slick-list {
-//   padding: 0 !important;
-// }
-
-// .thumbs__carousel-thumbs .slick-track {
-//   width: 100% !important;
-//   min-width: 298px;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-// }
-
-// .carousel__slide-card-wrapper .slick-slide {
-//   opacity: 0;
-//   visibility: hidden;
-// }
-
-// .carousel__slide-card-wrapper {
-//   .slick-active {
-//     .carousel__slide-card {
-//       opacity: 1;
-//       visibility: visible;
-//     }
-//   }
-// }
-
-// .carousel .slick-prev:before,
-// .slick-next:before {
-//   opacity: 1;
-//   color: $common-text;
-// }
-
-// .carousel .slick-next:before {
-// }
