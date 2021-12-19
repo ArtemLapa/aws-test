@@ -10,8 +10,6 @@ const searchIconCloseMob = document.querySelector(".header__search-icon-close");
 const main = document.querySelector("main");
 const footer = document.querySelector("footer");
 
-console.log(main, main.hasChildNodes());
-
 /**
  * Header & navigation
  */
@@ -30,6 +28,28 @@ searchBtnMob.addEventListener("click", () => {
   searchIconCloseMob.classList.toggle("d-none");
   searchIconMob.classList.toggle("d-none");
 });
+
+/**
+ * Header sticky
+ */
+
+if (document.documentElement.clientWidth > 1200) {
+  console.log("true");
+  window.onscroll = function () {
+    myFunction();
+  };
+}
+
+let navbar = document.querySelector(".nav-menu");
+let sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("nav-menu--sticky");
+  } else {
+    navbar.classList.remove("nav-menu--sticky");
+  }
+}
 
 /**
  * Footer sticky

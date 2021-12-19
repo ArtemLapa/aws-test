@@ -7,11 +7,17 @@ $style: "nav-menu";
     transform: translateY(0);
     height: auto;
   }
+  &--sticky {
+    position: fixed;
+    top: -11px;
+    width: 100%;
+  }
 
   @include media-b($b-xl) {
     height: auto;
     transform: translateY(11px);
     background-color: $athens-gray;
+    overflow: hidden;
   }
 
   &__navigation {
