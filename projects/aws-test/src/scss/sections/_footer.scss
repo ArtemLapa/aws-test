@@ -1,11 +1,7 @@
 $style: "footer";
 .#{$style} {
   background: $athens-gray;
-  &--sticky {
-    position: sticky;
-    bottom: 0;
-    top: 100%;
-  }
+
   @include media-b($b-xl) {
     padding: 54px 0 72px;
   }

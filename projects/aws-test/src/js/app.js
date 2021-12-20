@@ -34,7 +34,6 @@ searchBtnMob.addEventListener("click", () => {
  */
 
 if (document.documentElement.clientWidth > 1200) {
-  console.log("true");
   window.onscroll = function () {
     myFunction();
   };
@@ -50,17 +49,6 @@ function myFunction() {
     navbar.classList.remove("nav-menu--sticky");
   }
 }
-
-/**
- * Footer sticky
- */
-function isMainHasChild(elem) {
-  if (elem.hasChildNodes()) {
-    footer.classList.add("footer--sticky");
-  }
-}
-
-isMainHasChild(main);
 
 /**
  * Star rating
