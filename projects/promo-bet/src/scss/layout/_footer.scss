@@ -1,0 +1,109 @@
+.footer {
+  padding: 91px 0 56px;
+  @media screen and (max-width: 1024px) {
+    padding: 43px 0;
+  }
+
+  &__logo {
+    @media screen and (max-width: 1024px) {
+      display: none;
+    }
+
+    &--mobile {
+      display: none;
+      @media screen and (max-width: 1024px) {
+        display: block;
+        text-align: center;
+      }
+    }
+  }
+
+  &__form-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 90px;
+    @media screen and (max-width: 1024px) {
+      margin-bottom: 45px;
+    }
+  }
+
+  &__form {
+    position: relative;
+    max-width: 980px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+    @media screen and (max-width: 1024px) {
+      margin-left: 0;
+    }
+  }
+
+  &__form-input {
+    font-weight: 600;
+    font-size: 17.1864px;
+    line-height: 25px;
+    color: #058048;
+    border-radius: 84.7925px;
+    border: none;
+    padding: 6px 0 9px 24px;
+    width: calc(100% - 179px);
+    z-index: 1;
+    margin-left: 2px;
+    outline-color: #63D737;
+    font-family: 'Inter', sans-serif;
+    &::placeholder {
+      color: #D9D9D9;
+    }
+    @media screen and (max-width: 1024px) {
+      width: calc(100% - 97px);
+      font-size: 12.1086px;
+      line-height: 18px;
+      outline-width: 1px !important;
+      padding: 6px 0 6px 12px;
+      margin-left: 1px;
+    }
+  }
+
+  &__subscribe-btn {
+    position: absolute;
+    left: 0;
+    right: 0;
+    background: linear-gradient(102.12deg, #63D737 7.53%, #058048 98.25%);
+    border-radius: 99.1525px;
+    font-weight: 600;
+    font-size: 17.1864px;
+    line-height: 17px;
+    color: #FFFFFF;
+    text-align: right;
+    border: none;
+    padding: 13px 47px 14px 42px;
+    @media screen and (max-width: 1024px) {
+      font-size: 12.1086px;
+      line-height: 12px;
+      padding: 10px 17px 10px 16px;
+    }
+  }
+
+  &__payments-wrapper {
+    img {
+      width: 100%;
+      @media screen and (max-width: 1024px) {
+        display: none;
+      }
+
+      &:last-child {
+        display: none;
+        max-width: 320px;
+        margin: 0 auto;
+        @media screen and (max-width: 1024px) {
+          display: block;
+        }
+      }
+    }
+    @media screen and (max-width: 1024px) {
+      margin-bottom: 42px;
+    }
+  }
+}

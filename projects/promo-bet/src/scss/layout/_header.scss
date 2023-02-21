@@ -1,0 +1,51 @@
+.header {
+  position: relative;
+  max-height: 60px;
+  background: #293b2b linear-gradient(0deg, rgba(22, 26, 22, 0) -37.5%, #161A16 68%);
+  z-index: 1;
+  @media screen and (max-width: 1024px) {
+    height: 40px;
+  }
+
+  &__logo-wrapper {
+    @media screen and (max-width: 1024px) {
+      height: 18px;
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    @media screen and (max-width: 1024px) {
+      height: 40px;
+    }
+  }
+
+  &__actions-wrapper {
+    position: relative;
+    @media screen and (max-width: 1024px) {
+      height: 22px;
+    }
+  }
+
+  &__login {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+    text-decoration: underline;
+    @media screen and (max-width: 1024px) {
+      display: none;
+    }
+  }
+
+  &__registration {
+    margin: 0 0 0 19px;
+  }
+
+  &__promo-info {
+    position: relative;
+  }
+}
