@@ -112,6 +112,9 @@
     right: 0;
     bottom: 0;
     background: linear-gradient(0deg, rgba(41, 59, 43, 0.35), rgba(41, 59, 43, 0.35)), radial-gradient(58.29% 46% at 50% 54%, rgba(41, 59, 43, 0) 50.26%, #293B2B 100%);
+    @media screen and (max-width: 1024px) {
+      top: 0;
+    }
   }
 }
 
